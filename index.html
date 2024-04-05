@@ -26,7 +26,6 @@
     
 	<!--Main Col-->
 	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
-	
 
 		<div class="p-4 md:p-12 text-center lg:text-left">
 			<!-- Image for mobile view-->
@@ -41,7 +40,7 @@
 </br>
 <b>Bio:</b> </br>With over 14 years of experience in the technology sector, Vishal Patel possesses a profound understanding of emerging trends and adeptly translates them into actionable strategies that streamline operations and propel business growth. As a sought-after consultant, he plays a pivotal role in designing cutting-edge solutions and driving digital transformations, ensuring businesses stay ahead of the curve by adopting the latest technologies.
 			<div class="pt-12 pb-8">
-				<button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
+				<button id="myButton" class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
 				  Get In Touch
 				</button> 
 			</div>
@@ -70,40 +69,11 @@
 
 	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
 	<script src="https://unpkg.com/tippy.js@4"></script>
-	<script>
-		//Init tooltips
-		tippy('.link',{
-		  placement: 'bottom'
-		})
-
-		//Toggle mode
-		const toggle = document.querySelector('.js-change-theme');
-		const body = document.querySelector('body');
-		const profile = document.getElementById('profile');
-		
-		
-		toggle.addEventListener('click', () => {
-
-			window.location.href = "https://wa.me/919033969313";
-
-		  if (body.classList.contains('text-gray-900')) {
-			toggle.innerHTML = "☀️";
-			body.classList.remove('text-gray-900');
-			body.classList.add('text-gray-100');
-			profile.classList.remove('bg-white');
-			profile.classList.add('bg-gray-900');
-		  } else
-		  {
-			toggle.innerHTML = "🌙";
-			body.classList.remove('text-gray-100');
-			body.classList.add('text-gray-900');
-			profile.classList.remove('bg-gray-900');			
-			profile.classList.add('bg-white');
-			
-		  }
-		});
-		
-    </script>
+	<script type="text/javascript">
+		document.getElementById("myButton").onclick = function () {
+			location.href = "https://wa.me/919033969313?text=Hello Vishal, I'm connecting with you from your website";
+		};
+	</script>
 	
 </body>
 
